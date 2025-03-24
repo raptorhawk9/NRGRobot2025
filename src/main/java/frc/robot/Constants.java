@@ -67,7 +67,7 @@ public final class Constants {
      * The x distance from the odometry center (center of the wheels) to the edge of the front
      * bumper.
      */
-    public static final double ODOMETRY_CENTER_TO_FRONT_BUMPER_DELTA_X = ROBOT_LENGTH / 2;
+    public static final double ODOMETRY_CENTER_TO_FRONT_BUMPER_DELTA_X = 0.43; // ROBOT_LENGTH / 2;
 
     /**
      * The x distance from the odometry center (center of the wheels) to the edge of the rear
@@ -107,7 +107,8 @@ public final class Constants {
         public static final int COMPETITION_BOT_CLIMBER_MOTOR_ID = 11;
       }
 
-      public static final int CORAL_ARM_LASER_CAN_ID = 22;
+      public static final int LEFT_CORAL_ARM_LASER_CAN_ID = 23;
+      public static final int RIGHT_CORAL_ARM_LASER_CAN_ID = 22;
     }
 
     /** Digital I/O port numbers. */
@@ -143,8 +144,10 @@ public final class Constants {
 
   public class Quest3S {
 
-    public static final Transform2d QUEST_TO_ROBOT =
-        new Transform2d(-0.38, -0.095, Rotation2d.kZero);
+    public static final Transform2d ROBOT_TO_QUEST =
+        new Transform2d(-0.25, -0.30, Rotation2d.fromDegrees(-45));
+
+    public static final Transform2d QUEST_TO_ROBOT = ROBOT_TO_QUEST.inverse();
 
     public static final Matrix<N3, N1> STD_DEVS = VecBuilder.fill(0, 0, 0);
   }
