@@ -11,6 +11,9 @@
       "float[]##v_/questnav/position": {
         "open": true
       },
+      "float[]##v_/questnav/resetpose": {
+        "open": true
+      },
       "open": true
     }
   }
